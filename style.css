@@ -1,0 +1,460 @@
+ 
+    body{
+        margin: 0;
+        padding: 0px;
+     
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        background-color: #f0f0f0;
+      
+}
+.container-pai{
+    background-color: #333333bb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  
+}
+.container{
+    background-image: url(./img2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.titulo{
+    width: 150px;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-shadow: 9px 9px 0 #aaa;
+}
+
+.cubo{
+    perspective: 1000px;
+   margin-left: 25rem;
+
+}
+.geral{
+    
+    position: relative;
+    width: 200px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform: rotateX(30deg) rotateY(45deg);
+    animation: rotate 15s infinite linear;
+}
+.rotação{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background:rgba(240, 238, 238, 0.055) ;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.img1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   width: 13vw;
+   height: 25vh;
+}
+.cima{
+    transform: rotateY(0deg) translateZ(100px);
+
+}
+.baixo{ 
+    transform: rotateY(180deg) translateZ(100px);
+}
+.direita{
+   transform: rotateY(-90deg) translateZ(100px); 
+}
+.esquerda{
+    transform: rotateX(90deg) translateZ(100px);
+}
+.frente{
+   transform:rotateX(90deg) translateZ(100px);
+}
+.trás{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+@keyframes rotate{
+    from{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to{
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+#sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+#sobre h1{
+
+    color: aliceblue;
+    font-size: 2rem;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#sobre p{
+    padding: 15px;
+    font-size: 1.5rem;
+}
+#galeria h1{
+   
+    color: aliceblue;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    gap: 25px;
+}
+.fotos1{
+display: flex;
+width: 60%;
+justify-content: center;
+gap: 30px;
+}
+.config-fotos{
+    width: 32%;
+    height: 30vh;
+    object-fit: cover;
+    transition: all ease-out 0.5s;
+}
+.config-fotos:hover{
+    width: 80%;
+    height: 40vh ;
+    
+}
+.fotos2{
+display: flex;
+    width: 60%;
+    justify-content: center;
+    gap: 30px;
+}
+.config-fotos2{
+    width: 40%;
+    height: 35vh;
+    object-fit: cover;
+    transition: all ease-in-out 0.5s;
+    
+}
+.config-fotos2:hover{
+    width: 80%;
+        height: 40vh;
+}
+#contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+#contato h1{
+    color: aliceblue;
+    
+}
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+padding: 20px;
+}
+fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: solid 1px #000000;
+}
+input{
+    width: 25rem;
+    height: 3vh;
+    border-radius: 6px;
+    border: solid 1px #000000;
+    padding: 5px;
+    background: #33333313;
+    
+}
+::placeholder{
+    color: aliceblue;
+    font-size: 12px;
+}
+textarea{
+    width: 25rem;
+    background: #33333313;
+    border: solid 1px #000000;
+    padding: 5px;
+    
+}
+button{
+    width: 8rem;
+    height: 4vh;
+   
+}
+button:hover{
+    background: #aaa;
+}
+@media (width <= 430px){
+    .container{
+       text-align: center;
+       flex-direction: column;
+       gap: 150px;
+    }
+   .titulo{
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+   }
+   .cubo{
+   
+    margin-left: 0;
+   }
+  .rotação {
+     
+      width: 140px;
+      height: 140px;
+    
+  }
+  .cima {
+      transform: rotateY(0deg) translateZ(70px);
+
+  }
+
+  .baixo {
+      transform: rotateY(180deg) translateZ(70px);
+  }
+
+  .direita {
+      transform: rotateY(-90deg) translateZ(70px);
+  }
+
+  .esquerda {
+      transform: rotateX(90deg) translateZ(70px);
+  }
+
+  .frente {
+      transform: rotateX(90deg) translateZ(70px);
+  }
+
+  .trás {
+      transform: rotateX(-90deg) translateZ(70px);
+  }
+  .geral {
+
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg) rotateY(0deg);
+      animation: rotate 20s infinite linear;
+  }
+  .main {
+    width: 100%;
+
+  }
+  .fotos1 {
+  
+      width: 50%;
+   
+      gap: 10px;
+  }
+
+
+  .fotos2 {
+   
+      width: 50%;
+   
+      gap: 10px;
+  }
+
+  .config-fotos2 {
+      width: 45%;
+      height: 35vh;
+ 
+
+  }
+
+
+
+.formulario {
+ 
+    padding: 10px;
+}
+input {
+    width: 15rem;
+    height: 3vh;
+    border-radius: 6px;
+    border: solid 1px #000000;
+    padding: 5px;
+    background: #33333313;
+
+}
+
+
+
+textarea {
+    width: 15rem;
+  
+    padding: 2px;
+
+}
+
+button {
+    width: 5rem;
+    height: 3vh;
+}
+
+
+}
+
+@media (width >=430px) and (width <=768px){
+    .cubo{
+        margin: 0;
+        
+    }
+    .container{
+       width: 100%;
+        gap: 200px;
+        flex-direction: column;
+    }
+    .titulo {
+        font-size: 3rem;
+        align-items: center;
+        text-align: center;
+    }
+         .rotação {
+           
+             width: 160px;
+             height: 160px;
+             
+
+         }
+         .rotação a{
+            font-size: 2rem;
+            text-align: center;
+            
+         }
+    
+         .cima {
+             transform: rotateY(0deg) translateZ(80px);
+    
+         }
+    
+         .baixo {
+             transform: rotateY(180deg) translateZ(80px);
+         }
+    
+         .direita {
+             transform: rotateY(-90deg) translateZ(80px);
+         }
+    
+         .esquerda {
+             transform: rotateX(90deg) translateZ(80px);
+         }
+    
+         .frente {
+             transform: rotateX(90deg) translateZ(80px);
+         }
+    
+         .trás {
+             transform: rotateX(-90deg) translateZ(80px);
+         }
+         #contato{
+            width: 90%;
+         }
+                 .formulario {
+        
+                     padding: 10px;
+                 }
+        
+                 input {
+                     width: 15rem;
+                     height: 3vh;
+                     border-radius: 6px;
+                     border: solid 1px #000000;
+                     padding: 5px;
+                     background: #33333313;
+        
+                 }
+        
+        
+        
+                 textarea {
+                     width: 15rem;
+        
+                     padding: 2px;
+        
+                 }
+        
+                 button {
+                     width: 5rem;
+                     height: 3vh;
+                 }
+        
+}
+
+@media(width > 768px) and (width <= 1024px){
+.cubo {
+        margin: 0;
+
+    }
+
+    .container {
+        width: 100%;
+        gap: 200px;
+        padding-left: 65px;
+    }
+
+    .titulo {
+        font-size: 3.5rem;
+        align-items: center;
+        text-align: center;
+    }
+}
